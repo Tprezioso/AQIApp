@@ -13,6 +13,11 @@
 		5557E4622634CD1200A3BB4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557E4602634CD1200A3BB4A /* Main.storyboard */; };
 		5557E4642634CD1300A3BB4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5557E4632634CD1300A3BB4A /* Assets.xcassets */; };
 		5557E4672634CD1300A3BB4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557E4652634CD1300A3BB4A /* LaunchScreen.storyboard */; };
+		556DC9022636268500A49EEC /* AQIAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DC9012636268500A49EEC /* AQIAlertVC.swift */; };
+		556DC905263626E300A49EEC /* AQIAlertContainterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DC904263626E300A49EEC /* AQIAlertContainterView.swift */; };
+		556DC9082636272400A49EEC /* AQIBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DC9072636272400A49EEC /* AQIBodyLabel.swift */; };
+		556DC90B2636277500A49EEC /* AQITitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DC90A2636277500A49EEC /* AQITitleLabel.swift */; };
+		556DC90E2636279E00A49EEC /* AQIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DC90D2636279E00A49EEC /* AQIButton.swift */; };
 		558DBD532635C7E80043A7EB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558DBD522635C7E80043A7EB /* NetworkManager.swift */; };
 		558DBD562635C9650043A7EB /* AQData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558DBD552635C9650043A7EB /* AQData.swift */; };
 		558DBD592635CAD10043A7EB /* AQIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558DBD582635CAD10043A7EB /* AQIError.swift */; };
@@ -27,6 +32,11 @@
 		5557E4632634CD1300A3BB4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5557E4662634CD1300A3BB4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5557E4682634CD1300A3BB4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		556DC9012636268500A49EEC /* AQIAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIAlertVC.swift; sourceTree = "<group>"; };
+		556DC904263626E300A49EEC /* AQIAlertContainterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIAlertContainterView.swift; sourceTree = "<group>"; };
+		556DC9072636272400A49EEC /* AQIBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIBodyLabel.swift; sourceTree = "<group>"; };
+		556DC90A2636277500A49EEC /* AQITitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQITitleLabel.swift; sourceTree = "<group>"; };
+		556DC90D2636279E00A49EEC /* AQIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIButton.swift; sourceTree = "<group>"; };
 		558DBD522635C7E80043A7EB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		558DBD552635C9650043A7EB /* AQData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQData.swift; sourceTree = "<group>"; };
 		558DBD582635CAD10043A7EB /* AQIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIError.swift; sourceTree = "<group>"; };
@@ -65,6 +75,11 @@
 				5557E45A2634CD1200A3BB4A /* AppDelegate.swift */,
 				5557E45C2634CD1200A3BB4A /* SceneDelegate.swift */,
 				5557E45E2634CD1200A3BB4A /* ViewController.swift */,
+				556DC9012636268500A49EEC /* AQIAlertVC.swift */,
+				556DC90D2636279E00A49EEC /* AQIButton.swift */,
+				556DC90A2636277500A49EEC /* AQITitleLabel.swift */,
+				556DC9072636272400A49EEC /* AQIBodyLabel.swift */,
+				556DC904263626E300A49EEC /* AQIAlertContainterView.swift */,
 				558DBD522635C7E80043A7EB /* NetworkManager.swift */,
 				558DBD582635CAD10043A7EB /* AQIError.swift */,
 				558DBD552635C9650043A7EB /* AQData.swift */,
@@ -149,7 +164,12 @@
 				558DBD592635CAD10043A7EB /* AQIError.swift in Sources */,
 				558DBD532635C7E80043A7EB /* NetworkManager.swift in Sources */,
 				5557E45F2634CD1200A3BB4A /* ViewController.swift in Sources */,
+				556DC90E2636279E00A49EEC /* AQIButton.swift in Sources */,
+				556DC9082636272400A49EEC /* AQIBodyLabel.swift in Sources */,
+				556DC9022636268500A49EEC /* AQIAlertVC.swift in Sources */,
+				556DC905263626E300A49EEC /* AQIAlertContainterView.swift in Sources */,
 				5557E45B2634CD1200A3BB4A /* AppDelegate.swift in Sources */,
+				556DC90B2636277500A49EEC /* AQITitleLabel.swift in Sources */,
 				5557E45D2634CD1200A3BB4A /* SceneDelegate.swift in Sources */,
 				558DBD562635C9650043A7EB /* AQData.swift in Sources */,
 			);

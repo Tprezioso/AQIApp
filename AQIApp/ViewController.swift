@@ -12,6 +12,9 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var location = CLLocationCoordinate2D()
+    var airData = AQData()
+    
+    @IBOutlet weak var cityLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +33,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     func getData(){
-        NetworkManager.shared.getAirQuality(lat: String(format: "%f",location.latitude), lon: String(format: "%f",location.latitude)) { result in
+        NetworkManager.shared.getAirQuality(lat: String(format: "%f",location.latitude), lon: String(format: "%f",location.latitude)) {[weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let airData):
+                self.airData = airData
+            case .failure(let error):
+                self.presentGFAlertOnMainThread(title: "Bad things happen ", message: error.rawValue, buttonTitle: "OK")
+            }
             print(result)
         }
     }
@@ -39,9 +50,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         print("locations = \(locValue.latitude) \(locValue.longitude)")
-        NetworkManager.shared.work(lat: String(format: "%f",locValue.latitude), lon: String(format: "%f",locValue.longitude))
         location.latitude = locValue.latitude
         location.longitude = locValue.longitude
     }
 }
 
+extension UIViewController {
+    
+    func presentGFAlertOnMainThread(title: String, message: String, buttonTitle: String) {
+        DispatchQueue.main.async {
+            let alertVC = GFAlertVC(title: title, messages: message, buttonTitle: buttonTitle)
+            alertVC.modalPresentationStyle = .overFullScreen
+            alertVC.modalTransitionStyle = .crossDissolve
+            self.present(alertVC, animated: true)
+            
+        }
+    }
+}
