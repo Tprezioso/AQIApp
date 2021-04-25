@@ -6,23 +6,24 @@
 //
 
 import UIKit
+import CoreLocation
 
-class NetworkManager {
-    static let shared = NetworkManager()
-    private let baseURL = "https://api.waqi.info/feed/"
+final class NetworkManager {
     
+    static let shared = NetworkManager()
+    private let token = "41fee90aad3e3ecfc4d8c52666f33cab98e0d2ca"
     private init() {}
     
-    func getFollowers(for username: String, page: Int, completed: @escaping (Result<[Follower], GFError>) -> Void) {
-        let endpoint = baseURL + "geo:\(username);\(page)/?token=41fee90aad3e3ecfc4d8c52666f33cab98e0d2ca"
-        
-        guard let url = URL(string: endpoint) else {
-            completed(.failure(.invalidUsername))
+    let baseURL = "https://api.waqi.info/feed/"
+    
+    func getAirQuality(lat: String, lon: String, completed: @escaping (Result<AQData, AQIError>) -> Void) {
+        let appetizerURL = baseURL + "geo:\(lat);\(lon)/?token=\(token)"
+        guard let url = URL(string: appetizerURL) else {
+            completed(.failure(.invalidURL))
             return
         }
         
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            // handle the errors
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
             if let _ = error {
                 completed(.failure(.unableToComplete))
                 return
@@ -38,12 +39,12 @@ class NetworkManager {
                 return
             }
             
-            // handle the data and putting our followers in an array
             do {
-               let decoder = JSONDecoder()
+                let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let followers = try decoder.decode([Follower].self, from: data)
-                completed(.success(followers))
+                decoder.dateDecodingStrategy = .iso8601
+                let user = try decoder.decode(AQData.self, from: data)
+                completed(.success(user))
             } catch {
                 completed(.failure(.invalidData))
             }
@@ -51,3 +52,35 @@ class NetworkManager {
         }
         task.resume()
     }
+    func work(lat: String, lon: String) {
+        // Create URL
+        let url = URL(string: "https://api.waqi.info/feed/geo:\(lat);\(lon)/?token=\(token)")
+        guard let requestUrl = url else { fatalError() }
+        // Create URL Request
+        var request = URLRequest(url: requestUrl)
+        // Specify HTTP Method to use
+        request.httpMethod = "GET"
+        // Send HTTP Request
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            // Check if Error took place
+            if let error = error {
+                print("Error took place \(error)")
+                return
+            }
+            
+            // Read HTTP Response Status code
+            if let response = response as? HTTPURLResponse {
+                print("Response HTTP Status code: \(response.statusCode)")
+            }
+            
+            // Convert HTTP Response Data to a simple String
+            if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                print("Response data string:\n \(dataString)")
+            }
+            
+        }
+        task.resume()
+    }
+    
+}

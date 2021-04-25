@@ -14,6 +14,8 @@
 		5557E4642634CD1300A3BB4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5557E4632634CD1300A3BB4A /* Assets.xcassets */; };
 		5557E4672634CD1300A3BB4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557E4652634CD1300A3BB4A /* LaunchScreen.storyboard */; };
 		558DBD532635C7E80043A7EB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558DBD522635C7E80043A7EB /* NetworkManager.swift */; };
+		558DBD562635C9650043A7EB /* AQData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558DBD552635C9650043A7EB /* AQData.swift */; };
+		558DBD592635CAD10043A7EB /* AQIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558DBD582635CAD10043A7EB /* AQIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		5557E4662634CD1300A3BB4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5557E4682634CD1300A3BB4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558DBD522635C7E80043A7EB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		558DBD552635C9650043A7EB /* AQData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQData.swift; sourceTree = "<group>"; };
+		558DBD582635CAD10043A7EB /* AQIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				5557E45C2634CD1200A3BB4A /* SceneDelegate.swift */,
 				5557E45E2634CD1200A3BB4A /* ViewController.swift */,
 				558DBD522635C7E80043A7EB /* NetworkManager.swift */,
+				558DBD582635CAD10043A7EB /* AQIError.swift */,
+				558DBD552635C9650043A7EB /* AQData.swift */,
 				5557E4602634CD1200A3BB4A /* Main.storyboard */,
 				5557E4632634CD1300A3BB4A /* Assets.xcassets */,
 				5557E4652634CD1300A3BB4A /* LaunchScreen.storyboard */,
@@ -140,10 +146,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558DBD592635CAD10043A7EB /* AQIError.swift in Sources */,
 				558DBD532635C7E80043A7EB /* NetworkManager.swift in Sources */,
 				5557E45F2634CD1200A3BB4A /* ViewController.swift in Sources */,
 				5557E45B2634CD1200A3BB4A /* AppDelegate.swift in Sources */,
 				5557E45D2634CD1200A3BB4A /* SceneDelegate.swift in Sources */,
+				558DBD562635C9650043A7EB /* AQData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
