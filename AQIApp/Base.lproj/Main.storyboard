@@ -26,18 +26,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coordinates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIw-LW-5a1">
+                                <rect key="frame" x="8" y="141" width="398" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="398" id="31V-8W-vOx"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="NuN-z2-qS9"/>
+                                    <constraint firstAttribute="width" constant="398" id="Z4V-r0-ARo"/>
+                                    <constraint firstAttribute="height" constant="45" id="uIp-bs-pPh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aIF-D8-x9z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="JXo-2h-HHs"/>
+                            <constraint firstItem="PIw-LW-5a1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="LpW-Zl-HjH"/>
                             <constraint firstItem="aIF-D8-x9z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QoA-Ov-5t5"/>
+                            <constraint firstItem="PIw-LW-5a1" firstAttribute="top" secondItem="aIF-D8-x9z" secondAttribute="bottom" constant="8" symbolic="YES" id="i2f-Ge-gva"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aIF-D8-x9z" secondAttribute="trailing" constant="8" id="jGz-Si-vMb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Air Quality" id="r2P-5D-MBk"/>
                     <connections>
                         <outlet property="cityLabel" destination="aIF-D8-x9z" id="PXg-FQ-hdZ"/>
+                        <outlet property="coordinatesLabel" destination="PIw-LW-5a1" id="FfH-k3-pAf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
