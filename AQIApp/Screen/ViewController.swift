@@ -15,10 +15,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var coordinatesLabel: UILabel!
     @IBOutlet weak var aqiLabel: UILabel!
-
+    @IBOutlet weak var activityView: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCoreLocation()
+        activityView.style = .large
     }
 
     func setupCoreLocation() {
@@ -33,16 +35,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     func getData(){
-        NetworkManager.shared.getAirQuality(lat: String(format: "%f",location.latitude), lon: String(format: "%f",location.latitude)) { [weak self] result in
-            guard let self = self else { return }
-
-            switch result {
-            case .success(let airData):
-                 print(airData)
-            case .failure(let error):
-                self.presentGFAlertOnMainThread(title: "Bad things happen", message: error.rawValue, buttonTitle: "OK")
+        self.activityView.startAnimating()
+            NetworkManager.shared.getAirQuality(lat: String(format: "%f",self.location.latitude), lon: String(format: "%f",self.location.latitude)) { [weak self] result in
+                guard let self = self else { return }
+                switch result {
+                case .success(let airData):
+                     print(airData)
+                    self.activityView.isHidden = true
+                case .failure(let error):
+                    self.presentGFAlertOnMainThread(title: "Bad things happen", message: error.rawValue, buttonTitle: "OK")
+                }
             }
-        }
+
     }
 
     

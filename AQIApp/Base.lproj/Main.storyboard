@@ -38,7 +38,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AQI Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fh5-qz-AJ9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AQI Number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fh5-qz-AJ9">
                                 <rect key="frame" x="8" y="194" width="398" height="263"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="263" id="Tz4-ZH-bFR"/>
@@ -47,6 +47,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="d86-3L-sIy">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -63,6 +67,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Local Air Quality" id="r2P-5D-MBk"/>
                     <connections>
+                        <outlet property="activityView" destination="d86-3L-sIy" id="rrI-Zb-ZCf"/>
                         <outlet property="aqiLabel" destination="Fh5-qz-AJ9" id="vJJ-YR-FSQ"/>
                         <outlet property="cityLabel" destination="aIF-D8-x9z" id="PXg-FQ-hdZ"/>
                         <outlet property="coordinatesLabel" destination="PIw-LW-5a1" id="FfH-k3-pAf"/>

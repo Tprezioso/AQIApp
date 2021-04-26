@@ -39,14 +39,17 @@ final class NetworkManager {
                 return
             }
             
-            do {
-               
-                let decoder = JSONDecoder()
-                
-                let user = try decoder.decode(AQData.self, from: data)
-                completed(.success(user))
-            } catch {
-                completed(.failure(.invalidData))
+            DispatchQueue.main.async {
+                do {
+                   
+                    let decoder = JSONDecoder()
+                    
+                    let user = try decoder.decode(AQData.self, from: data)
+                    completed(.success(user))
+                } catch {
+                    completed(.failure(.invalidData))
+                }
+
             }
             
         }
