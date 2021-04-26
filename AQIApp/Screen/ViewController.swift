@@ -12,12 +12,10 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var location = CLLocationCoordinate2D()
-
-
-    
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var coordinatesLabel: UILabel!
-    
+    @IBOutlet weak var aqiLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCoreLocation()
@@ -42,7 +40,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             case .success(let airData):
                  print(airData)
             case .failure(let error):
-                self.presentGFAlertOnMainThread(title: "Bad things happen ", message: error.rawValue, buttonTitle: "OK")
+                self.presentGFAlertOnMainThread(title: "Bad things happen", message: error.rawValue, buttonTitle: "OK")
             }
         }
     }
@@ -50,9 +48,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        print("Coordinates: \(locValue.latitude) \(locValue.longitude)")
         location.latitude = locValue.latitude
         location.longitude = locValue.longitude
+        coordinatesLabel.text = "Coordinates: \(locValue.latitude) \(locValue.longitude)"
         getData()
 //        NetworkManager.shared.work(lat: String(format: "%f",locValue.latitude), lon: String(format: "%f",locValue.longitude))
         
@@ -63,7 +62,7 @@ extension UIViewController {
     
     func presentGFAlertOnMainThread(title: String, message: String, buttonTitle: String) {
         DispatchQueue.main.async {
-            let alertVC = GFAlertVC(title: title, messages: message, buttonTitle: buttonTitle)
+            let alertVC = AQIAlertVC(title: title, messages: message, buttonTitle: buttonTitle)
             alertVC.modalPresentationStyle = .overFullScreen
             alertVC.modalTransitionStyle = .crossDissolve
             self.present(alertVC, animated: true)

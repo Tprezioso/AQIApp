@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GFAlertVC: UIViewController {
+class AQIAlertVC: UIViewController {
 
     let containerView = AQIAlertContainerView()
     let titleLabel = AQITitleLabel(textAlignment: .center, fontSize: 20)
