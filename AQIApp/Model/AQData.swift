@@ -8,7 +8,6 @@
 import Foundation
 
 struct AQData: Codable {
-    var status: String
     var data: DataParse
 }
 

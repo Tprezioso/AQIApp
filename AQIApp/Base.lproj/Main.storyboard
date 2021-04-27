@@ -47,22 +47,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="d86-3L-sIy">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="d86-3L-sIy">
                                 <rect key="frame" x="197" y="438" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5r5-GD-ciS">
+                                <rect key="frame" x="20" y="478" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Fh5-qz-AJ9" firstAttribute="top" secondItem="PIw-LW-5a1" secondAttribute="bottom" constant="8" symbolic="YES" id="4dt-h0-SI6"/>
                             <constraint firstItem="Fh5-qz-AJ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="5wh-Gd-Ox9"/>
+                            <constraint firstItem="d86-3L-sIy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EKN-kb-0vO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fh5-qz-AJ9" secondAttribute="trailing" constant="8" id="Ezt-BR-zMw"/>
                             <constraint firstItem="aIF-D8-x9z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="JXo-2h-HHs"/>
                             <constraint firstItem="PIw-LW-5a1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="LpW-Zl-HjH"/>
                             <constraint firstItem="aIF-D8-x9z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QoA-Ov-5t5"/>
+                            <constraint firstItem="5r5-GD-ciS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Wqb-O1-3pb"/>
+                            <constraint firstItem="d86-3L-sIy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dYx-kC-zee"/>
                             <constraint firstItem="PIw-LW-5a1" firstAttribute="top" secondItem="aIF-D8-x9z" secondAttribute="bottom" constant="8" symbolic="YES" id="i2f-Ge-gva"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aIF-D8-x9z" secondAttribute="trailing" constant="8" id="jGz-Si-vMb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5r5-GD-ciS" secondAttribute="trailing" constant="20" id="jS7-rr-aev"/>
+                            <constraint firstItem="5r5-GD-ciS" firstAttribute="top" secondItem="d86-3L-sIy" secondAttribute="bottom" constant="20" id="r0g-HQ-xhp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Local Air Quality" id="r2P-5D-MBk"/>
@@ -71,6 +81,7 @@
                         <outlet property="aqiLabel" destination="Fh5-qz-AJ9" id="vJJ-YR-FSQ"/>
                         <outlet property="cityLabel" destination="aIF-D8-x9z" id="PXg-FQ-hdZ"/>
                         <outlet property="coordinatesLabel" destination="PIw-LW-5a1" id="FfH-k3-pAf"/>
+                        <outlet property="levelLabel" destination="5r5-GD-ciS" id="Y9A-Q2-VLb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
