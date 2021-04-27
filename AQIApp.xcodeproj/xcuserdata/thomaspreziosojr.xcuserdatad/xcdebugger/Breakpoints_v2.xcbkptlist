@@ -36,5 +36,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B828AC47-8168-4DCB-991E-B816672B48B1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AQIApp/Screen/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getAirQualityData(lat:lon:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B828AC47-8168-4DCB-991E-B816672B48B1 - ea235f92de74f9e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AQIApp.ViewController.getAirQualityData(lat: Swift.String, lon: Swift.String) -&gt; ()"
+                  moduleName = "AQIApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomaspreziosojr/Desktop/Develop/iOS/Projects/AQIApp/AQIApp/Screen/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "B828AC47-8168-4DCB-991E-B816672B48B1 - e66255c7d849fbd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;AQIApp.AQData, AQIApp.AQIError&gt;) -&gt; () in AQIApp.ViewController.getAirQualityData(lat: Swift.String, lon: Swift.String) -&gt; ()"
+                  moduleName = "AQIApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomaspreziosojr/Desktop/Develop/iOS/Projects/AQIApp/AQIApp/Screen/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -78,8 +78,7 @@
 				556DC92B26362FBD00A49EEC /* Alert */,
 				556DC92C26362FC400A49EEC /* Manager */,
 				556DC92E26362FCD00A49EEC /* Model */,
-				5557E4602634CD1200A3BB4A /* Main.storyboard */,
-				5557E4652634CD1300A3BB4A /* LaunchScreen.storyboard */,
+				55884EBA2638BDF100493CA7 /* Storyboards */,
 				5557E4682634CD1300A3BB4A /* Info.plist */,
 			);
 			path = AQIApp;
@@ -161,6 +160,15 @@
 				5557E4632634CD1300A3BB4A /* Assets.xcassets */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		55884EBA2638BDF100493CA7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5557E4602634CD1200A3BB4A /* Main.storyboard */,
+				5557E4652634CD1300A3BB4A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

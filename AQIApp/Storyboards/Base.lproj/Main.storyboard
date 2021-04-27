@@ -17,41 +17,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIF-D8-x9z">
-                                <rect key="frame" x="8" y="88" width="398" height="45"/>
+                                <rect key="frame" x="8" y="88" width="398" height="79"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="jVy-d5-08x"/>
-                                    <constraint firstAttribute="width" constant="398" id="zgq-sl-JoR"/>
+                                    <constraint firstAttribute="height" constant="79" id="UTW-ZF-m4U"/>
+                                    <constraint firstAttribute="width" constant="398" id="Yvk-kC-1Vc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coordinates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIw-LW-5a1">
-                                <rect key="frame" x="8" y="141" width="398" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="398" id="31V-8W-vOx"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="NuN-z2-qS9"/>
-                                    <constraint firstAttribute="width" constant="398" id="Z4V-r0-ARo"/>
-                                    <constraint firstAttribute="height" constant="45" id="uIp-bs-pPh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AQI Number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fh5-qz-AJ9">
-                                <rect key="frame" x="8" y="194" width="398" height="263"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="263" id="Tz4-ZH-bFR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="66"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="d86-3L-sIy">
                                 <rect key="frame" x="197" y="438" width="20" height="20"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5r5-GD-ciS">
-                                <rect key="frame" x="20" y="478" width="374" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coordinates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIw-LW-5a1">
+                                <rect key="frame" x="8" y="175" width="398" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Bz0-gP-k7G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AQI Number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fh5-qz-AJ9">
+                                <rect key="frame" x="8" y="228" width="398" height="263"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="263" id="KVV-6o-9Gn"/>
+                                    <constraint firstAttribute="width" constant="398" id="vex-uJ-u9F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="66"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quality Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5r5-GD-ciS">
+                                <rect key="frame" x="20" y="511" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="wYX-8d-LlS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -60,22 +61,29 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Fh5-qz-AJ9" firstAttribute="top" secondItem="PIw-LW-5a1" secondAttribute="bottom" constant="8" symbolic="YES" id="4dt-h0-SI6"/>
-                            <constraint firstItem="Fh5-qz-AJ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="5wh-Gd-Ox9"/>
-                            <constraint firstItem="d86-3L-sIy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EKN-kb-0vO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fh5-qz-AJ9" secondAttribute="trailing" constant="8" id="Ezt-BR-zMw"/>
-                            <constraint firstItem="aIF-D8-x9z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="JXo-2h-HHs"/>
-                            <constraint firstItem="PIw-LW-5a1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="LpW-Zl-HjH"/>
-                            <constraint firstItem="aIF-D8-x9z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QoA-Ov-5t5"/>
-                            <constraint firstItem="5r5-GD-ciS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Wqb-O1-3pb"/>
-                            <constraint firstItem="d86-3L-sIy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dYx-kC-zee"/>
-                            <constraint firstItem="PIw-LW-5a1" firstAttribute="top" secondItem="aIF-D8-x9z" secondAttribute="bottom" constant="8" symbolic="YES" id="i2f-Ge-gva"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aIF-D8-x9z" secondAttribute="trailing" constant="8" id="jGz-Si-vMb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5r5-GD-ciS" secondAttribute="trailing" constant="20" id="jS7-rr-aev"/>
-                            <constraint firstItem="5r5-GD-ciS" firstAttribute="top" secondItem="d86-3L-sIy" secondAttribute="bottom" constant="20" id="r0g-HQ-xhp"/>
+                            <constraint firstItem="PIw-LW-5a1" firstAttribute="top" secondItem="aIF-D8-x9z" secondAttribute="bottom" constant="8" symbolic="YES" id="0cf-rU-mXL"/>
+                            <constraint firstItem="PIw-LW-5a1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="7BW-bG-q6B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aIF-D8-x9z" secondAttribute="trailing" constant="8" id="Adl-Qv-eqz"/>
+                            <constraint firstItem="Fh5-qz-AJ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Axs-mF-4Zt"/>
+                            <constraint firstItem="d86-3L-sIy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RH9-P8-tEC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PIw-LW-5a1" secondAttribute="trailing" constant="8" id="SAT-US-yES"/>
+                            <constraint firstItem="aIF-D8-x9z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="XZU-y6-rB2"/>
+                            <constraint firstItem="Fh5-qz-AJ9" firstAttribute="top" secondItem="PIw-LW-5a1" secondAttribute="bottom" constant="8" symbolic="YES" id="byb-in-sKQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fh5-qz-AJ9" secondAttribute="trailing" constant="8" id="j6U-3g-Qbf"/>
+                            <constraint firstItem="d86-3L-sIy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jG2-eO-j1q"/>
+                            <constraint firstItem="5r5-GD-ciS" firstAttribute="top" secondItem="Fh5-qz-AJ9" secondAttribute="bottom" constant="20" id="jmH-zf-fbj"/>
+                            <constraint firstItem="5r5-GD-ciS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pix-fl-lwE"/>
+                            <constraint firstItem="aIF-D8-x9z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tOY-Yv-miJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5r5-GD-ciS" secondAttribute="trailing" constant="20" id="yc0-9H-Xaa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Local Air Quality" id="r2P-5D-MBk"/>
+                    <navigationItem key="navigationItem" title="Local Air Quality" id="r2P-5D-MBk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Cpl-cj-CNq">
+                            <connections>
+                                <action selector="reloadButtonPressed:" destination="BYZ-38-t0r" id="dtT-KL-vAU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityView" destination="d86-3L-sIy" id="rrI-Zb-ZCf"/>
                         <outlet property="aqiLabel" destination="Fh5-qz-AJ9" id="vJJ-YR-FSQ"/>

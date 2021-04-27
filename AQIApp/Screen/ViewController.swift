@@ -35,9 +35,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    func getAirQualityData(){
+    func getAirQualityData(lat: String, lon: String){
         self.activityView.startAnimating()
-        NetworkManager.shared.getAirQualityData(lat: String(format: "%f",self.location.latitude), lon: String(format: "%f",self.location.latitude)) { [weak self] result in
+        NetworkManager.shared.getAirQualityData(lat: lat, lon: lon) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let airData):
@@ -86,8 +86,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         location.latitude = locValue.latitude
         location.longitude = locValue.longitude
         coordinatesLabel.text = "Coordinates: \(locValue.latitude) \(locValue.longitude)"
-        getAirQualityData()
+        getAirQualityData(lat: String(format: "%f",self.location.latitude), lon: String(format: "%f",self.location.longitude))
         
+    }
+    @IBAction func reloadButtonPressed(_ sender: Any) {
+        getAirQualityData(lat: String(format: "%f",self.location.latitude), lon: String(format: "%f",self.location.longitude))
     }
 }
 
