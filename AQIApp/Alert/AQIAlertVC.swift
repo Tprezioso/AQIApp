@@ -95,5 +95,4 @@ class AQIAlertVC: UIViewController {
         dismiss(animated: true)
     }
     
-    
 }

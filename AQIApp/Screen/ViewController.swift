@@ -8,7 +8,6 @@
 import UIKit
 import CoreLocation
 
-
 class ViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var location = CLLocationCoordinate2D()
@@ -32,7 +31,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
-        
     }
     
     func getAirQualityData(lat: String, lon: String){
@@ -44,7 +42,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 print(airData)
                 self.cityLabel.text = airData.data.city.name
                 self.setupAQINumber(aqi: airData.data.aqi)
-//                self.aqiLabel.text = "AQI: \(airData.data.aqi)"
                 self.activityView.isHidden = true
             case .failure(let error):
                 self.activityView.isHidden = true
@@ -76,7 +73,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.levelLabel.text = "Hazardous"
         default:
             self.aqiLabel.backgroundColor = .black
-
         }
     }
     
@@ -102,7 +98,6 @@ extension UIViewController {
             alertVC.modalPresentationStyle = .overFullScreen
             alertVC.modalTransitionStyle = .crossDissolve
             self.present(alertVC, animated: true)
-            
         }
     }
 }

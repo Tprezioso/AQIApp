@@ -30,7 +30,6 @@ class AQITitleLabel: UILabel {
         minimumScaleFactor = 0.90
         lineBreakMode = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
-        
     }
     
 }

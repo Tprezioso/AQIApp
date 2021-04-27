@@ -12,7 +12,6 @@ class AQIButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -23,7 +22,6 @@ class AQIButton: UIButton {
         self.init(frame: .zero)
         self.backgroundColor = backgroundColor
         self.setTitle(title, for: .normal)
-        
     }
     
     private func configure() {
