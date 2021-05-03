@@ -61,7 +61,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.levelLabel.text = "Moderate"
         case 101..<150:
             self.aqiLabel.backgroundColor = .orange
-            self.levelLabel.text = "Unhealthy for Sentative Groups"
+            self.levelLabel.text = "Unhealthy for Sensitive Groups"
         case 151..<200:
             self.aqiLabel.backgroundColor = .red
             self.levelLabel.text = "Unhealthy"

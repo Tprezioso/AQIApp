@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreLocation
 
 final class NetworkManager {
     
@@ -16,8 +15,8 @@ final class NetworkManager {
     let baseURL = "https://api.waqi.info/feed/"
     
     func getAirQualityData(lat: String, lon: String, completed: @escaping (Result<AQData, AQIError>) -> Void) {
-        let appetizerURL = baseURL + "geo:\(lat);\(lon)/?token=\(token)"
-        guard let url = URL(string: appetizerURL) else {
+        let airQualityURL = baseURL + "geo:\(lat);\(lon)/?token=\(token)"
+        guard let url = URL(string: airQualityURL) else {
             completed(.failure(.invalidURL))
             return
         }
